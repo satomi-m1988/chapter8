@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clearfix:: after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+main{
+  width: 960px;
+  margin: 50px auto;
+}
+
+.list {
+	margin-bottom: 50px;
+}
+
+.gray-box {
+	width: 960px;
+	height: 50px;
+	background-color: #DDDDDD;
+}
+
+.white-box {
+	width: 960px;
+	height: 50px;
+	background-color: white;
+}
+
+.list {
+	color: #999999;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+
+.box {
+	background-color: #ffd700;
+	width: 30%;
+	height: 200px;
+	float: left;
+	margin-right: 5%;
+	margin-bottom: 40px;
+} /*これで９個の箱を作る一旦全て黄色*/
+
+.box:first-child,
+.box:last-child,
+.box:nth-child(5){
+  background-color: #ff8c00;
+} /*ここでオレンジになる*/
+
+.box:nth-child(3n){
+  margin-right: 0;
+} /*箱が９個整列する*/
+
+.box:nth-last-child(-n+3){
+  margin-bottom: 0;
+}
